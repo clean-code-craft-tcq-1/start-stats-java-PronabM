@@ -35,10 +35,9 @@ public class StatisticsTest
         //Float.NaN (not-a-number), as described in
         //https://www.geeksforgeeks.org/nan-not-number-java/
         //Design the asserts here and implement accordingly.
-        float epsilon = 0.001f;
-        assertEquals(s.average, Float.NaN, epsilon);
-        assertEquals(s.min, Float.NaN, epsilon);
-        assertEquals(s.max, Float.NaN, epsilon);
+        assertTrue(s.average.isNaN());
+        assertTrue(s.min.isNaN());
+        assertTrue(s.max.isNaN());
     }
     @Test
     public void reportsAlertsIfMaxIsMoreThanThreshold()
